@@ -6,7 +6,7 @@
         "mailer"
       ],
       "subscribers": [
-        "basic"
+        "basic","external-checks"
       ],
       "interval": 60
     }
