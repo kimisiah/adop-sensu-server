@@ -1,0 +1,9 @@
+{
+  "mailer": {
+    "mail_from": "sensumonitoring@scb.com",
+    "mail_to": "jerrick.m.falogme@accenture.com",
+    "smtp_address": "10.10.2.82",
+    "smtp_port": "25",
+    "smtp_domain": "10.10.2.82"
+  }
+}

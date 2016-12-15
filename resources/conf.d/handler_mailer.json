@@ -2,14 +2,22 @@
   "handlers": {
     "mailer": {
       "type": "pipe",
-      "command": "/etc/sensu/handlers/mailer.rb"
+      "command": "cat"
+    },
+    "default":{
+      "type":"pipe",
+      "refresh":600,
+      "command":"cat"
+    },
+    "scb-mailer": {
+      "type":"pipe",
+      "command": "handler-mailer.rb -j scb-adop-mailer",
+      "severities": [
+        "ok",
+        "critical",
+        "warning",
+        "unknown"
+      ]
     }
-  },
-  "mailer-ses": {
-   "mail_from": "TOKEN_MAILER_FROM",
-   "mail_to": "TOKEN_MAILER_TO_CSV",
-   "aws_access_key": "TOKEN_MAILER_SMTP_USERNAME",
-   "aws_secret_key": "TOKEN_MAILER_SMTP_PASSWORD",
-   "aws_ses_endpoint": "TOKEN_MAILER_SMTP_SERVER"
   }
 }

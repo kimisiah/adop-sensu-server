@@ -1,0 +1,10 @@
+{
+  "scb-adop-mailer": {
+    "admin_gui": "http://sensu-uchiwa:3000",
+    "mail_from": "sensu@scbldap.accenture.com",
+    "mail_to": "jerrick.m.falogme@accenture.com,eugene.eu.k.lim@accenture.com",
+    "smtp_address": "mail-server",
+    "smtp_port": "25",
+    "smtp_domain": "awsamazon.com"
+  }
+} 

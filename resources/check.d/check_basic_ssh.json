@@ -3,12 +3,13 @@
     "check_basic_ssh": {
       "command": "${PLUGINS_DIR}/basic/check-banner.rb -p 22 -h 127.0.0.1",
       "handlers": [
-        "mailer"
+        "scb-mailer"
       ],
       "subscribers": [
         "basic"
       ],
-      "interval": 60
+      "interval": 60,
+      "refresh": 60
     }
   }
 }

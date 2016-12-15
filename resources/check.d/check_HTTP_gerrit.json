@@ -1,6 +1,7 @@
 {
   "checks": {
     "check_HTTP_gerrit": {
+      "type":"metric",
       "command": "${PLUGINS_DIR}/basic/check-http.rb -u http://gerrit:8080/gerrit/#/q/status:open",
       "handlers": [
         "mailer"
@@ -8,7 +9,8 @@
       "subscribers": [
         "gerrit"
       ],
-      "interval": 60
+      "interval": 30,
+      "refresh": 60
     }
   }
 }

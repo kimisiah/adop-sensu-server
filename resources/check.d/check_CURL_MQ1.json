@@ -1,0 +1,17 @@
+{
+  "checks": {
+    "check_HTTP_MQ1": {
+      "command": "${PLUGINS_DIR}/basic/check-http.rb -kw -u https://10.10.1.95:94X3/v1/deposits/summary --method POST --body '{ \"depositList\": [ { \"referenceNumber\": \"1112000099\" }, { \"referenceNumber\": \"1112000029\" } ], \"numberRecentTxn\": 3 }' --header \"Content-Type: application/json\" --response-code 200",
+      "handlers": [
+        "mailer",
+        "default",
+        "scb-mailer"
+      ],
+      "subscribers": [
+        "active-mq"
+      ],
+      "interval": 300,
+      "refresh": 300
+    }
+  }
+}

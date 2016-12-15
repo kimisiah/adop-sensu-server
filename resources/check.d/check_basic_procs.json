@@ -3,12 +3,13 @@
     "check_basic_procs": {
       "command": "${PLUGINS_DIR}/basic/check-procs.rb",
       "handlers": [
-        "mailer"
+        "scb-mailer"
       ],
       "subscribers": [
         "basic","external-checks"
       ],
-      "interval": 60
+      "interval": 60,
+      "refresh": 60
     }
   }
 }
